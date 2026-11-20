@@ -3,14 +3,13 @@
 
 ```pkg update && pkg upgrade```
 
-```pkg install x11-repo wget unzip kotlin gradle git aapt2 openjdk-21
-```
+```pkg install x11-repo wget unzip kotlin gradle git aapt2 openjdk-21```
 
 ```cd ~ && wget https://dl.google.com/android/repository/commandlinetools-linux-15859902_latest.zip```
 Use Lastest CommandLineTool for Linux Version
 
 
-``mkdir AndroidSdk && mkdir latest```
+```mkdir AndroidSdk && mkdir latest```
 
 
 ```unzip commandlinetools-linux-15859902_latest.zip* -d AndroidSdk/ && ls AndroidSdk/cmdline-tools```
@@ -24,8 +23,7 @@ Use Lastest CommandLineTool for Linux Version
 
 ## use sdkmanager from export path
 
-```export PATH=$PATH:$(pwd)/AndroidSdk/cmdline-tools/latest/bin:$(pwd)/AndroidSdk/platform-tools
-```
+```export PATH=$PATH:$(pwd)/AndroidSdk/cmdline-tools/latest/bin:$(pwd)/AndroidSdk/platform-tools```
 
 ```sdkmanager  || cd ~/AndroidSdk/cmdline-tools/latest/bin/ bash sdkmanager && sdkmanager --update && sdkmanager --list```
 
