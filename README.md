@@ -1,4 +1,4 @@
-### Termux Sdk Install Morphe Patch
+## Termux Sdk Install Morphe Patch
 
 
 pkg update && pkg upgrade
@@ -10,27 +10,46 @@ cd ~
 wget https://dl.google.com/android/repository/commandlinetools-linux-15859902_latest.zip
 `Use Lastest CommandLineTool for Linux Version`
 
+
 mkdir AndroidSdk
 mkdir latest
+
+
 unzip commandlinetools-linux-15859902_latest.zip* -d AndroidSdk/
+
 ls AndroidSdk/cmdline-tools
+
 mv AndroidSdk/cmdline-tools/* latest/
+
 mv latest AndroidSdk/cmdline-tools/
+
 ls AndroidSdk/cmdline-tools/latest/bin
+
 export ANDROID_HOME=$(pwd)/AndroidSdk
+
 export JAVA_HOME=/data/data/com.termux/files/usr/lib/jvm/java-21-openjdk
+
 ls $ANDROID_HOME
 
 //use sdkmanager from export path
+
 export PATH=$PATH:$(pwd)/AndroidSdk/cmdline-tools/latest/bin:$(pwd)/AndroidSdk/platform-tools
+
 sdkmanager  || cd ~/AndroidSdk/cmdline-tools/latest/bin/ bash sdkmanager
+
 sdkmanager --update
+
 sdkmanager --list
+
 yes | sdkmanager --licenses
 yes | sdkmanager --licenses
-sdkmanager "platform-tools" "platforms;android-34"
-sdkmanager "build-tools;35.0.0"
+
+sdkmanager "platform-tools" "platforms;android-35"
+sdkmanager "build-tools;36.0.0"
+
 rm -rf commandlinetools-linux*
+
+###Termux Storage
 termux-setup-storage
 
 ##Run This Command Get Github Access Token(Morphe Patch)
