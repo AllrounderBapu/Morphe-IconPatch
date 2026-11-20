@@ -31,7 +31,8 @@ export JAVA_HOME=/data/data/com.termux/files/usr/lib/jvm/java-21-openjdk
 
 ls $ANDROID_HOME
 
-//use sdkmanager from export path
+
+## use sdkmanager from export path
 
 export PATH=$PATH:$(pwd)/AndroidSdk/cmdline-tools/latest/bin:$(pwd)/AndroidSdk/platform-tools
 
@@ -49,10 +50,10 @@ sdkmanager "build-tools;36.0.0"
 
 rm -rf commandlinetools-linux*
 
-###Termux Storage
+### Termux Storage
 termux-setup-storage
 
-##Run This Command Get Github Access Token(Morphe Patch)
+## Run This Command Get Github Access Token(Morphe Patch)
 
 mkdir -p ~/.gradle
 cat << 'EOF' >> ~/.gradle/gradle.properties
@@ -61,7 +62,7 @@ gpr.key=ghp_YOUR_TOKEN
 EOF
 
 
-##Create Patch Morphe
+## Create Patch Morphe
 cd /storage/emulated/0/Download/BKPS/morphed-pl
 bash gradlew buildAndroid --no-daemon
 
